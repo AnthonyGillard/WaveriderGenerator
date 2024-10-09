@@ -21,7 +21,6 @@ class Wedge(ShockGenerator):
 
     def _calculate_shock_angle(self):
         shock_angles = np.linspace(1, 45, 441)
-        #print(shock_angles)
 
         print(minimize(self._wedge_shock_angle_relationship, np.array([5]), args=(self.wedge_angle)))
 
